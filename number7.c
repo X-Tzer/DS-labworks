@@ -71,5 +71,16 @@ int main()
         }
         printf("\n");
     }
+    for (i = 1; i < 9; i++)
+    {
+        if (truthtable[i][7] == "T")
+            continue;
+        else
+            break;
+    }
+    if (i == 9)
+        printf("This is valid argument");
+    else
+        printf("This is invalid argument");
     return 0;
 }
