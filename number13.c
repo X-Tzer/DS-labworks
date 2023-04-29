@@ -41,7 +41,7 @@ int main()
 
 void dir_graph()
 {
-    int adj_mat[50][50];
+    int adj_mat[50][50],i,j;
     int n, in_deg, out_deg;
 
     printf("\n How Many Vertices?");
@@ -50,17 +50,17 @@ void dir_graph()
 
     printf("\n Vertex \t In Degree \t Out Degree \t Total Degree");
 
-    for (int i = 1; i <= n; i++)
+    for ( i = 1; i <= n; i++)
     {
         in_deg = out_deg = 0;
 
-        for (int j = 1; j <= n; j++)
+        for ( j = 1; j <= n; j++)
         {
             if (adj_mat[j][i] == 1)
                 in_deg++;
         }
 
-        for (int j = 1; j <= n; j++)
+        for ( j = 1; j <= n; j++)
         {
             if (adj_mat[i][j] == 1)
                 out_deg++;
@@ -72,7 +72,7 @@ void dir_graph()
 
 void undir_graph()
 {
-    int adj_mat[50][50];
+    int adj_mat[50][50],i,j;
     int n, deg;
 
     printf("\n How Many Vertices ?");
@@ -81,11 +81,11 @@ void undir_graph()
 
     printf("\n Vertex \t Degree");
 
-    for (int i = 1; i <= n; i++)
+    for ( i = 1; i <= n; i++)
     {
         deg = 0;
 
-        for (int j = 1; j <= n; j++)
+        for ( j = 1; j <= n; j++)
         {
             if (adj_mat[i][j] == 1)
                 deg++;
@@ -97,11 +97,12 @@ void undir_graph()
 
 void read_graph(int adj_mat[][50], int n)
 {
+	int i,j;
     char reply;
 
-    for (int i = 1; i <= n; i++)
+    for ( i = 1; i <= n; i++)
     {
-        for (int j = 1; j <= n; j++)
+        for ( j = 1; j <= n; j++)
         {
             if (i == j)
             {
